@@ -1,14 +1,14 @@
 package com.odoo.clone.backend.core.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.odoo.clone.backend.AbstractIntegrationTest;
-import com.odoo.clone.backend.core.model.View;
+import com.odoo.clone.backend.BaseIntegrationTest;
 import com.odoo.clone.backend.core.repository.ViewRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.HashMap;
@@ -20,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ViewControllerTest extends AbstractIntegrationTest {
+public class ViewControllerTest extends BaseIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -32,6 +32,7 @@ public class ViewControllerTest extends AbstractIntegrationTest {
     private ObjectMapper objectMapper;
 
     @Test
+    @WithMockUser
     void shouldCreateAndGetView() throws Exception {
         Map<String, Object> viewData = new HashMap<>();
         viewData.put("name", "Test View");

@@ -1,7 +1,7 @@
 package com.odoo.clone.backend.core.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.odoo.clone.backend.AbstractIntegrationTest;
+import com.odoo.clone.backend.BaseIntegrationTest;
 import com.odoo.clone.backend.core.model.User;
 import com.odoo.clone.backend.core.repository.UserRepository;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class AuthControllerTest extends AbstractIntegrationTest {
+
+
+public class AuthControllerTest extends BaseIntegrationTest {
 
     @Autowired
     private MockMvc mockMvc;

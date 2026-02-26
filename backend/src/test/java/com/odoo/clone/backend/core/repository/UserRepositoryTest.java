@@ -1,21 +1,21 @@
 package com.odoo.clone.backend.core.repository;
 
-import com.odoo.clone.backend.AbstractIntegrationTest;
+import com.odoo.clone.backend.BaseIntegrationTest;
 import com.odoo.clone.backend.core.model.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@DataJpaTest
+@SpringBootTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 @ActiveProfiles("test")
-public class UserRepositoryTest extends AbstractIntegrationTest {
+public class UserRepositoryTest extends BaseIntegrationTest {
 
     @Autowired
     private UserRepository userRepository;
