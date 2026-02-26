@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: odoo-clone-backend
   datasource:
     url: jdbc:postgresql://localhost:5432/odoo_clone
     username: postgres
@@ -16,12 +14,3 @@ spring:
   flyway:
     enabled: true
     baseline-on-migrate: true
-
-server:
-  port: 8080
-
-springdoc:
-  api-docs:
-    path: /v3/api-docs
-  swagger-ui:
-    path: /swagger-ui.html
