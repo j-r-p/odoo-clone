@@ -1,6 +1,7 @@
-package com.odoo.clone.backend.repository;
+package com.odoo.clone.backend.core.repository;
 
-import com.odoo.clone.backend.model.Permission;
+import com.odoo.clone.backend.core.model.Contact;
+import com.odoo.clone.backend.core.model.Permission;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

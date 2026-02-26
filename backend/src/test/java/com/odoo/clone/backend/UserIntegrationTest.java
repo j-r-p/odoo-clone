@@ -1,11 +1,11 @@
 package com.odoo.clone.backend;
 
-import com.odoo.clone.backend.model.Permission;
-import com.odoo.clone.backend.model.Role;
-import com.odoo.clone.backend.model.User;
-import com.odoo.clone.backend.repository.PermissionRepository;
-import com.odoo.clone.backend.repository.RoleRepository;
-import com.odoo.clone.backend.repository.UserRepository;
+import com.odoo.clone.backend.core.model.Permission;
+import com.odoo.clone.backend.core.model.Role;
+import com.odoo.clone.backend.core.model.User;
+import com.odoo.clone.backend.core.repository.PermissionRepository;
+import com.odoo.clone.backend.core.repository.RoleRepository;
+import com.odoo.clone.backend.core.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;

@@ -29,7 +29,7 @@ public class CustomUserDetailsService implements UserDetailsService {
                 .password(user.getPassword())
                 .authorities(user.getRoles().stream()
                         .flatMap(role -> role.getPermissions().stream())
-                        .map(SimpleGrantedAuthority::new)
+                        .map(permission -> new SimpleGrantedAuthority(permission.getName()))
                         .collect(Collectors.toList()))
                 .build();
     }
