@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/odoo_clone
-    username: postgres
-    password: password
+    url: jdbc:postgresql://localhost:54695/postgres
+    username: odoo
+    password: odoo
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
